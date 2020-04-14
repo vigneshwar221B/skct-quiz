@@ -1,7 +1,9 @@
 import React from 'react'
+import '../styles.css'
 
 class Cert extends React.Component {
 	componentDidMount() {
+		
 		fetch('https://limitless-cliffs-33100.herokuapp.com/add')
 			.then((res) => res.json())
 			.then((data) => {})
@@ -9,67 +11,44 @@ class Cert extends React.Component {
 
 	render() {
 		return (
-			<div
-				id='printC'
-				style={{
-					padding: '20px',
-					textAlign: 'center',
-					border: '10px solid #FBC500',
-					backgroundColor: 'white',
-					marginBottom: '10px',
-				}}
-			>
-				<div
-					style={{
-						padding: '20px',
-						textAlign: 'center',
-						border: '5px solid #FF6701',
-						backgroundColor: 'white',
-					}}
-				>
-					<span
-						style={{
-							fontSize: '50px',
-							fontWeight: 'bold',
-							fontFamily: 'sans-serif',
-						}}
-					>
-						Certificate of Completion
-					</span>
-					<br />
-					<br />
-					<br />
-					<span style={{ fontSize: '25px', fontFamily: 'sans-serif' }}>
-						<i>This is to certify that</i>
-					</span>
-					<br />
-					<span style={{ fontSize: '30px', fontFamily: 'sans-serif' }}>
-						{this.props.state.name + '   '}
-					</span>
-					<span style={{ fontSize: '25px', fontFamily: 'sans-serif' }}>
-						<i>has completed the course</i>
-					</span>{' '}
-					<br />
-					<br />
-					<span style={{ fontSize: '30px', fontFamily: 'sans-serif' }}>
-						course name
-					</span>{' '}
-					<br />
-					<br />
-					<span style={{ fontSize: '20px', fontFamily: 'sans-serif' }}>
-						with score of{' '}
-						<b>
-							{this.props.state.score} of {this.props.total}
-						</b>
-					</span>{' '}
-					<br />
-					<br />
-					<br />
-					<br />
-					<span style={{ fontSize: '25px', fontFamily: 'sans-serif' }}>
-						<i>dated {new Date().toDateString()}</i>
-					</span>
-					<br />
+			<div className='container' style={{transform: this.props.show && 'scale(0.6)'}}>
+				<div className='outer-border'>
+					<div className='inner-border'>
+						<img
+							src={require('../assets/side.png')}
+							className='side-img'
+							alt='side'
+						/>
+						<div className='main'>
+							<img
+								src={require('../assets/skct.png')}
+								className='skct'
+								alt='skct'
+							/>
+							<div className='title'>
+								COVID-19 Pandemic General <br /> Awarness Quiz
+							</div>
+							<div className='subject'>
+								Certificate of Appreciation gladly presented to
+							</div>
+							<div className='name'>{this.props.state.name}</div>
+							<div className='reason'>
+								For Excellent Performance in COVID-19 Pandemic <br />
+								General Awarness Quiz
+							</div>
+							<div className='college'>
+								Presented By:
+								<br />
+								Department of CSE
+							</div>
+							<img
+								src={require('../assets/ski.png')}
+								className='ski'
+								alt='ski'
+							/>
+							<div className='date'>{new Date().toLocaleDateString()}</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		)

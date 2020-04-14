@@ -51,7 +51,10 @@ const Result = (props) => {
 				fail
 			) : (
 				<>
-					<Cert state={props.state} total={total} ref={componentRef} />
+					<div style={{ display: 'none' }}>
+						<Cert state={props.state} total={total} ref={componentRef} />
+					</div>
+					<Cert state={props.state} total={total} show={true} />
 					<ReactToPrint
 						trigger={() => (
 							<Button
