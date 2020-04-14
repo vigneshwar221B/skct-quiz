@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+
+import Home from './components/Home'
+import Name from './components/Name'
+import Quiz from './components/Quiz'
+import Result from './components/Result'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [state, setstate] = useState({
+		start: false,
+		name: '',
+		score: 0,
+		finish: false,
+	})
+
+	const stateHandler = (newstate) => {
+		setstate((state) => {
+			return {
+				...state,
+				...newstate,
+			}
+		})
+	}
+
+	console.log(state)
+
+	const restart = () => {
+		setstate((state) => {
+			return {
+				...state,
+				start: false,
+				name: '',
+				score: 0,
+				finish: false,
+			}
+		})
+	}
+	return (
+		<>
+		<div
+			className='App'
+			style={{
+				display: 'flex',
+				height: '100%',
+				width: '100%',
+				justifyContent: 'center',
+				alignItems: 'center',
+			}}
+		>
+			{!state.start && !state.finish && <Home start={stateHandler} />}
+			{state.start && !state.name && !state.finish && (
+				<Name setName={stateHandler} />
+			)}
+			{state.name && !state.finish && (
+				<Quiz name={state.name} handler={stateHandler} />
+			)}
+			{state.finish && <Result state={state} restart = {restart} />}
+		</div>
+		<div class="footer" id="foot">
+			<b>by SKCT website team</b>
+		</div>
+		</>
+	)
 }
 
-export default App;
+export default App
