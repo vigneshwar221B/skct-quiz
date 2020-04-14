@@ -3,7 +3,6 @@ import '../styles.css'
 
 class Cert extends React.Component {
 	componentDidMount() {
-		
 		fetch('https://limitless-cliffs-33100.herokuapp.com/add')
 			.then((res) => res.json())
 			.then((data) => {})
@@ -11,7 +10,12 @@ class Cert extends React.Component {
 
 	render() {
 		return (
-			<div className='container' style={{transform: this.props.show && 'scale(0.6)'}}>
+			<div
+				className='container'
+				style={{
+					transform: this.props.show && 'scale(0.6)',
+				}}
+			>
 				<div className='outer-border'>
 					<div className='inner-border'>
 						<img
