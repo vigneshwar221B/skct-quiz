@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/skct-quiz/static/css/main.9e2932c0.chunk.css",
+    "main.js": "/skct-quiz/static/js/main.05d5bc0d.chunk.js",
+    "main.js.map": "/skct-quiz/static/js/main.05d5bc0d.chunk.js.map",
+    "runtime-main.js": "/skct-quiz/static/js/runtime-main.072b5b4b.js",
+    "runtime-main.js.map": "/skct-quiz/static/js/runtime-main.072b5b4b.js.map",
+    "static/js/2.67476085.chunk.js": "/skct-quiz/static/js/2.67476085.chunk.js",
+    "static/js/2.67476085.chunk.js.map": "/skct-quiz/static/js/2.67476085.chunk.js.map",
+    "index.html": "/skct-quiz/index.html",
+    "precache-manifest.61045bdc3f0a0c876f9e842328ac07ee.js": "/skct-quiz/precache-manifest.61045bdc3f0a0c876f9e842328ac07ee.js",
+    "service-worker.js": "/skct-quiz/service-worker.js",
+    "static/css/main.9e2932c0.chunk.css.map": "/skct-quiz/static/css/main.9e2932c0.chunk.css.map",
+    "static/js/2.67476085.chunk.js.LICENSE.txt": "/skct-quiz/static/js/2.67476085.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.072b5b4b.js",
+    "static/js/2.67476085.chunk.js",
+    "static/css/main.9e2932c0.chunk.css",
+    "static/js/main.05d5bc0d.chunk.js"
+  ]
+}
