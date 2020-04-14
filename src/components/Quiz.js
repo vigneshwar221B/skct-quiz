@@ -46,8 +46,7 @@ export default function Quiz(props) {
 	}
 
 	return (
-		<Paper elevation={3} style={{padding: '8px'}}>
-			score: {score}
+		<Paper elevation={3} style={{padding: '8px', width: '45%'}}>
 			<form onSubmit={handleSubmit}>
 				<FormControl component='fieldset' className={classes.formControl}>
 					<FormLabel component='legend'>{data.questions[index]}</FormLabel>

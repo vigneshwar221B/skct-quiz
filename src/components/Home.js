@@ -36,7 +36,7 @@ const Home = (props) => {
 		<Container>
 			<Grid container spacing={3} alignItems='center'>
 				<Grid item xs={12}>
-					<h1 style={{ color: 'white' }}>
+					<h1 style={{ color: 'white', fontSize: '30px' }}>
 						{count}+ already have taken the quiz
 					</h1>
 				</Grid>
