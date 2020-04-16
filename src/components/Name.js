@@ -45,43 +45,47 @@ const Name = (props) => {
 
 	return (
 		<>
-			<Snackbar open={open} 
-			autoHideDuration={6000} 
-			anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-			onClose={handleClose}>
-				<Alert onClose={handleClose} severity="error">
+			<Snackbar
+				open={open}
+				autoHideDuration={6000}
+				anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+				onClose={handleClose}
+			>
+				<Alert onClose={handleClose} severity='error'>
 					type your name
 				</Alert>
 			</Snackbar>
-			<form className={classes.root} noValidate autoComplete='off'>
-				<TextField
-					id='outlined-secondary'
-					label='Name'
-					variant='filled'
-					value={name}
-					onChange={handleName}
-					style={{
-						backgroundColor: 'white',
-					}}
-					InputProps={{
-						style: {
-							color: 'black',
-						},
-					}}
-				/>
-				<Button
-					onClick={() => {
-						console.log('uwu')
 
-						if (name.trim().length === 0) {
-							setOpen(true)
-						} else props.setName({ name })
-					}}
-					className={classes.btn}
-				>
-					Take quiz now
-				</Button>
-			</form>
+			<TextField
+				id='outlined-secondary'
+				label='Name'
+				variant='filled'
+				value={name}
+				onChange={handleName}
+				style={{
+					backgroundColor: 'white',
+				}}
+				InputProps={{
+					style: {
+						color: 'black',
+					},
+				}}
+			/>
+			<Button
+				onClick={() => {
+					console.log('uwu')
+
+					if (name.trim().length === 0) {
+						setOpen(true)
+					} else props.setName({ name })
+				}}
+				style={{
+					marginLeft: '35px'
+				}}
+				className={classes.btn}
+			>
+				Take quiz now
+			</Button>
 		</>
 	)
 }

@@ -50,12 +50,12 @@ code {
 }
 
 .right {
-	margin-left: 3px;
+	margin-right: 6px;
 	justify-content: flex-end;
 }
 
 .left {
-	margin-left: 3px;
+	margin-left: 6px;
 	justify-content: flex-start;
 }
 

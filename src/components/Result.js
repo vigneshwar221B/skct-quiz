@@ -6,8 +6,6 @@ import Container from '@material-ui/core/Container'
 
 import cert from '../assets/cert'
 
-import data from '../data/main'
-
 import * as jsPDF from 'jspdf'
 import { saveAs } from 'file-saver'
 
@@ -39,14 +37,18 @@ const Result = (props) => {
 		props.restart()
 	}
 
-	const total = data.questions.length
 	const fail = (
 		<Container>
 			<Grid container spacing={3} alignItems='center'>
 				<Grid item xs={12} style={{ color: 'white' }}>
-					<h1 style={{
-						fontSize: '30pt'
-					}}>you scored only {props.state.score} pts</h1>
+					<h1
+						style={{
+							fontSize: '30pt',
+						}}
+					>
+						You scored only {props.state.score} points. Try to get atleast 7 to
+						get the certificate.
+					</h1>
 				</Grid>
 				<Grid item xs={12}>
 					<Button onClick={restart} className={classes.root}>
@@ -59,7 +61,7 @@ const Result = (props) => {
 
 	return (
 		<>
-			{total !== props.state.score ? (
+			{props.state.score < 7 ? (
 				fail
 			) : (
 				<div
@@ -76,7 +78,7 @@ const Result = (props) => {
 							fontSize: '30pt',
 						}}
 					>
-						Thanks for taking the quiz
+						Thanks for taking the Quiz
 					</p>
 					<Button
 						className={classes.root}
@@ -89,7 +91,7 @@ const Result = (props) => {
 							doc.setFontSize(30)
 							doc.setTextColor(0, 0, 0)
 							doc.text(props.state.name, 140, 120, null, null, 'center')
-							saveAs(doc.output('blob'), 'test.pdf')
+							saveAs(doc.output('blob'), 'skct-covid19-quiz.pdf')
 						}}
 					>
 						Download the certificate

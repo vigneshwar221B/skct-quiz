@@ -38,7 +38,7 @@ const Home = (props) => {
 			style={{
 				height: '100%',
 				width: '100%',
-				backgroundColor: 'rgb(255,255,255,0.5)',
+				backgroundColor: 'rgb(255,255,255)',
 				display: 'flex',
 				justifyContent: 'center',
 				alignItems: 'center',
