@@ -55,37 +55,47 @@ const Name = (props) => {
 					type your name
 				</Alert>
 			</Snackbar>
-
-			<TextField
-				id='outlined-secondary'
-				label='Name'
-				variant='filled'
-				value={name}
-				onChange={handleName}
+			<div
 				style={{
-					backgroundColor: 'white',
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center',
 				}}
-				InputProps={{
-					style: {
-						color: 'black',
-					},
-				}}
-			/>
-			<Button
-				onClick={() => {
-					console.log('uwu')
-
-					if (name.trim().length === 0) {
-						setOpen(true)
-					} else props.setName({ name })
-				}}
-				style={{
-					marginLeft: '35px'
-				}}
-				className={classes.btn}
 			>
-				Take quiz now
-			</Button>
+				<TextField
+					id='outlined-secondary'
+					label='Name'
+					variant='filled'
+					value={name}
+					onChange={handleName}
+					style={{
+						backgroundColor: 'white',
+						width: '400px'
+					}}
+					InputProps={{
+						style: {
+							color: 'black',
+							backgroundColor: 'white'
+						},
+					}}
+				/>
+				<Button
+					onClick={() => {
+						console.log('uwu')
+
+						if (name.trim().length === 0) {
+							setOpen(true)
+						} else props.setName({ name })
+					}}
+					style={{
+						marginTop: '35px',
+					}}
+					className={classes.btn}
+				>
+					Take quiz now
+				</Button>
+			</div>
 		</>
 	)
 }
