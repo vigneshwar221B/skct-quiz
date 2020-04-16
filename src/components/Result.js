@@ -4,10 +4,12 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 
-import ReactToPrint from 'react-to-print'
+import cert from '../assets/cert'
 
 import data from '../data/main'
-import Cert from './Cert'
+
+import * as jsPDF from 'jspdf'
+import { saveAs } from 'file-saver'
 
 const useStyles = makeStyles({
 	root: {
@@ -50,29 +52,35 @@ const Result = (props) => {
 			{total !== props.state.score ? (
 				fail
 			) : (
-				<>
-					<div style={{ display: 'none' }}>
-						<Cert state={props.state} total={total} ref={componentRef} />
-					</div>
-					<Cert state={props.state} total={total} show={true} />
-					<ReactToPrint
-						trigger={() => (
-							<Button
-								style={{
-									background:
-										'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-									color: 'white',
-									position: 'absolute',
-									top: '8px',
-									right: '8px',
-								}}
-							>
-								print
-							</Button>
-						)}
-						content={() => componentRef.current}
-					/>
-				</>
+				<div
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+						flexDirection: 'column'
+					}}
+				>
+					<p style={{
+						color: 'white',
+						fontSize: '30pt'
+					}}>Thanks for taking the quiz</p>
+					<Button
+						className={classes.root}
+						style={{
+							marginTop: '20px'
+						}}
+						onClick={() => {
+							const doc = new jsPDF({ orientation: 'landscape' })
+							doc.addImage(cert, 'PNG', 0, 0, 290, 210)
+							doc.setFontSize(30)
+							doc.setTextColor(0, 0, 0)
+							doc.text(props.state.name, 140, 120, null, null, 'center')
+							saveAs(doc.output('blob'), 'test.pdf')
+						}}
+					>
+						Download the certificate
+					</Button>
+				</div>
 			)}
 		</>
 	)

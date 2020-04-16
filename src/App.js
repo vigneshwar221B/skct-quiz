@@ -29,10 +29,10 @@ function App() {
 		setstate((state) => {
 			return {
 				...state,
-				start: false,
-				name: '',
-				score: 0,
-				finish: false,
+				start: true,
+				name: 'dfg',
+				score: 9,
+				finish: true,
 			}
 		})
 	}
