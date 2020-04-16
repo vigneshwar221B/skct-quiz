@@ -36,8 +36,8 @@ const Home = (props) => {
 	const loading = (
 		<div
 			style={{
-				height: '100vh',
-				width: '100vh',
+				height: '100%',
+				width: '100%',
 				backgroundColor: 'rgb(255,255,255,0.5)',
 				display: 'flex',
 				justifyContent: 'center',
