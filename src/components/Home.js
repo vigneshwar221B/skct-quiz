@@ -33,23 +33,50 @@ const Home = (props) => {
 			.catch((err) => console.log(err))
 	}, [])
 
+	const loading = (
+		<div
+			style={{
+				height: '100vh',
+				width: '100vh',
+				backgroundColor: 'rgb(255,255,255,0.5)',
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+			}}
+		>
+			{' '}
+			<img src={require('../assets/inst.png')} alt="loading" style={{
+				height: '14vh',
+				width: '14vh',
+			}} />
+		</div>
+	)
+
 	return (
-		<Container>
-			<Grid container spacing={3} alignItems='center'>
-				<Grid item xs={12}>
-					<h1 style={{ color: 'white', fontSize: '30px' }}>
-						Take up the quiz for Covid-19 awareness. Let's Join the chain to
-						build unity and strengthen the community together.<br /><br />
-						{count} have already taken the quiz
-					</h1>
-				</Grid>
-				<Grid item xs={12}>
-					<Button onClick={startQuiz} className={classes.root}>
-						Take quiz now
-					</Button>
-				</Grid>
-			</Grid>
-		</Container>
+		<>
+			{count === 'Many' ? (
+				loading
+			) : (
+				<Container>
+					<Grid container spacing={3} alignItems='center'>
+						<Grid item xs={12}>
+							<h1 style={{ color: 'white', fontSize: '30px' }}>
+								Take up the quiz for Covid-19 awareness. Let's Join the chain to
+								build unity and strengthen the community together.
+								<br />
+								<br />
+								{count} have already taken the quiz
+							</h1>
+						</Grid>
+						<Grid item xs={12}>
+							<Button onClick={startQuiz} className={classes.root}>
+								Take quiz now
+							</Button>
+						</Grid>
+					</Grid>
+				</Container>
+			)}
+		</>
 	)
 }
 
