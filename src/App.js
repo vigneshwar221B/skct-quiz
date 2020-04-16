@@ -59,7 +59,7 @@ function App() {
 			</div>
 			<div class='footer' id='foot'>
 				<div class='left'>
-					<b>copyright</b>
+					<b>copyright ©</b>
 				</div>
 				<div class='center'>
 					<b>by SKCT website team CSE</b>
