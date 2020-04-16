@@ -58,15 +58,13 @@ function App() {
 				{state.finish && <Result state={state} restart={restart} />}
 			</div>
 			<div class='footer' id='foot'>
+				
 				<div class='left'>
-					<b>copyright ©</b>
+					<b>© BY SKCT-CSE WEBSITE TEAM</b>
 				</div>
-				<div class='center'>
-					<b>by SKCT website team CSE</b>
-				</div>
-				<div class='right'>
-					<a href="http://www.skct.edu.in" style={{color: 'white', textDecoration: 'none'}}>official website</a>
-				</div>
+				<span class='right'>
+					<a href="http://www.skct.edu.in" style={{color: 'white', textDecoration: 'none'}}>www.skct.edu.in</a>
+				</span>
 			</div>
 		</>
 	)

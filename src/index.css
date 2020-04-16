@@ -47,14 +47,11 @@ code {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0;
-	
-
 }
 
 .right {
-	margin-right: 3px;
-	justify-content: flex-start;
-
+	margin-left: 3px;
+	justify-content: flex-end;
 }
 
 .left {
