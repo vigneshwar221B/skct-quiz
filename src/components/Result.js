@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
@@ -24,10 +24,18 @@ const useStyles = makeStyles({
 })
 
 const Result = (props) => {
-	const componentRef = useRef()
+	useEffect(() => {
+		fetch(' https://limitless-cliffs-33100.herokuapp.com/add')
+			.then((res) => res.json())
+			.then((data) => {})
+			.catch((err) => console.log(err))
+	}, [])
+
 	const classes = useStyles()
 
 	const restart = () => {
+		console.log('restarted')
+
 		props.restart()
 	}
 
@@ -35,8 +43,10 @@ const Result = (props) => {
 	const fail = (
 		<Container>
 			<Grid container spacing={3} alignItems='center'>
-				<Grid item xs={12}>
-					you scored {props.state.score} pts
+				<Grid item xs={12} style={{ color: 'white' }}>
+					<h1 style={{
+						fontSize: '30pt'
+					}}>you scored only {props.state.score} pts</h1>
 				</Grid>
 				<Grid item xs={12}>
 					<Button onClick={restart} className={classes.root}>
@@ -57,17 +67,21 @@ const Result = (props) => {
 						display: 'flex',
 						justifyContent: 'center',
 						alignItems: 'center',
-						flexDirection: 'column'
+						flexDirection: 'column',
 					}}
 				>
-					<p style={{
-						color: 'white',
-						fontSize: '30pt'
-					}}>Thanks for taking the quiz</p>
+					<p
+						style={{
+							color: 'white',
+							fontSize: '30pt',
+						}}
+					>
+						Thanks for taking the quiz
+					</p>
 					<Button
 						className={classes.root}
 						style={{
-							marginTop: '20px'
+							marginTop: '20px',
 						}}
 						onClick={() => {
 							const doc = new jsPDF({ orientation: 'landscape' })

@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 })
 
 const Home = (props) => {
-	const [count, setCount] = useState(100)
+	const [count, setCount] = useState('Many')
 	const classes = useStyles()
 
 	const startQuiz = () => {
@@ -28,8 +28,9 @@ const Home = (props) => {
 		fetch(' https://limitless-cliffs-33100.herokuapp.com/howmany')
 			.then((res) => res.json())
 			.then((data) => {
-				setCount(data.count)
+				setCount(data.count + '+')
 			})
+			.catch((err) => console.log(err))
 	}, [])
 
 	return (
@@ -37,7 +38,9 @@ const Home = (props) => {
 			<Grid container spacing={3} alignItems='center'>
 				<Grid item xs={12}>
 					<h1 style={{ color: 'white', fontSize: '30px' }}>
-						{count}+ already have taken the quiz
+						Take up the quiz for Covid-19 awareness. Let's Join the chain to
+						build unity and strengthen the community together.<br /><br />
+						{count} have already taken the quiz
 					</h1>
 				</Grid>
 				<Grid item xs={12}>

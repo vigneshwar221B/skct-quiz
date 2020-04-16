@@ -46,19 +46,33 @@ export default function Quiz(props) {
 	}
 
 	return (
-		<Paper elevation={3} style={{padding: '8px', width: '45%'}}>
-			<form onSubmit={handleSubmit}>
+		<Paper
+			elevation={3}
+			style={{ padding: '8px',width: '75%', marginBottom: '70px' }}
+		>
+			<form onSubmit={handleSubmit} style={{}}>
 				<FormControl component='fieldset' className={classes.formControl}>
-					<FormLabel component='legend'>{data.questions[index]}</FormLabel>
+					<FormLabel
+						component='legend'
+						style={{ color: 'black', fontSize: '16pt' }}
+					>
+						{index + 1}) {data.questions[index]}
+					</FormLabel>
 					<RadioGroup
 						aria-label='quiz'
 						name='quiz'
 						value={value}
 						onChange={handleRadioChange}
+						style={{ marginTop: '15px' }}
 					>
 						{data.choices[index].map((el) => {
 							return (
-								<FormControlLabel value={el} control={<Radio />} label={el} />
+								<FormControlLabel
+									value={el}
+									control={<Radio />}
+									label={el}
+									style={{ marginTop: '8px' }}
+								/>
 							)
 						})}
 					</RadioGroup>

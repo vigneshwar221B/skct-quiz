@@ -29,10 +29,10 @@ function App() {
 		setstate((state) => {
 			return {
 				...state,
-				start: true,
-				name: 'dfg',
-				score: 9,
-				finish: true,
+				start: false,
+				name: '',
+				score: 0,
+				finish: false,
 			}
 		})
 	}
@@ -46,6 +46,7 @@ function App() {
 				width: '100%',
 				justifyContent: 'center',
 				alignItems: 'center',
+			
 			}}
 		>
 			{!state.start && !state.finish && <Home start={stateHandler} />}
