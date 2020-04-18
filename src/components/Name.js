@@ -71,7 +71,7 @@ const Name = (props) => {
 					onChange={handleName}
 					style={{
 						backgroundColor: 'white',
-						width: '400px'
+						width: '40vw'
 					}}
 					InputProps={{
 						style: {

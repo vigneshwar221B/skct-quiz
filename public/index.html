@@ -58,13 +58,55 @@
 		<title>SKCT - Covid19 Quiz</title>
 	</head>
 	<body>
-		<div style="position: absolute; top: 8px; left: 8px;">
-			<img
-				src="%PUBLIC_URL%/clg.png"
-				alt="clg logo"
-				style="height: 10vh; width: 10vh;"
-			/>
+		<style>
+			.header {
+				position: fixed;
+				top: 0;
+				width: 100vw;
+				height: 8vh;
+				background: linear-gradient(
+					90.4deg,
+					rgba(244, 199, 62, 1) -3.8%,
+					rgba(244, 62, 62, 1) 46.8%,
+					rgba(245, 61, 195, 1) 98.8%
+				);
+				color: #ffffff;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0;
+			}
+
+			.right {
+				margin-right: 6px;
+				justify-content: flex-end;
+			}
+
+			.left {
+				margin-left: 6px;
+				justify-content: flex-start;
+			}
+
+			.center {
+				
+				text-align: center;
+				align-items: center;
+				
+				justify-content: center;
+			}
+		</style>
+		<div class="header">
+			<div class="left">
+				<img src="%PUBLIC_URL%/clg.png" alt="logo" style="height: 7vh; width: 7vh; " />
+			</div>
+			<span class="center">
+				<b style="font-size: large;">SRI KRISHNA COLLEGE OF TECHNOLOGY</b>
+			</span>
+			<div class="right" >
+				<img src="%PUBLIC_URL%/cn3.png" alt="logo" style="height: 7vh; width: 7vh; " />
+			</div>
 		</div>
+
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
 		<!--
