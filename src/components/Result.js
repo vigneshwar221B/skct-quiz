@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 const Result = (props) => {
 	useEffect(() => {
-		fetch(' https://limitless-cliffs-33100.herokuapp.com/add')
+		fetch('https://limitless-cliffs-33100.herokuapp.com/add')
 			.then((res) => res.json())
 			.then((data) => {})
 			.catch((err) => console.log(err))
@@ -70,12 +70,14 @@ const Result = (props) => {
 						justifyContent: 'center',
 						alignItems: 'center',
 						flexDirection: 'column',
+						textAlign: 'center',
 					}}
 				>
 					<p
 						style={{
 							color: 'white',
 							fontSize: '30pt',
+							fontFamily: 'inherit',
 						}}
 					>
 						Thanks for taking the Quiz
