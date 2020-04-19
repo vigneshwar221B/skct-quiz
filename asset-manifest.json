@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/skct-quiz/static/css/main.8b7b7297.chunk.css",
-    "main.js": "/skct-quiz/static/js/main.a97673da.chunk.js",
-    "main.js.map": "/skct-quiz/static/js/main.a97673da.chunk.js.map",
+    "main.js": "/skct-quiz/static/js/main.bea5d668.chunk.js",
+    "main.js.map": "/skct-quiz/static/js/main.bea5d668.chunk.js.map",
     "runtime-main.js": "/skct-quiz/static/js/runtime-main.072b5b4b.js",
     "runtime-main.js.map": "/skct-quiz/static/js/runtime-main.072b5b4b.js.map",
     "static/js/2.ff361fbe.chunk.js": "/skct-quiz/static/js/2.ff361fbe.chunk.js",
     "static/js/2.ff361fbe.chunk.js.map": "/skct-quiz/static/js/2.ff361fbe.chunk.js.map",
     "index.html": "/skct-quiz/index.html",
-    "precache-manifest.42a85acccbae4e121897b115aea80340.js": "/skct-quiz/precache-manifest.42a85acccbae4e121897b115aea80340.js",
+    "precache-manifest.8ce1791faff4660c6e1d9faa52c7acb7.js": "/skct-quiz/precache-manifest.8ce1791faff4660c6e1d9faa52c7acb7.js",
     "service-worker.js": "/skct-quiz/service-worker.js",
     "static/css/main.8b7b7297.chunk.css.map": "/skct-quiz/static/css/main.8b7b7297.chunk.css.map",
     "static/js/2.ff361fbe.chunk.js.LICENSE.txt": "/skct-quiz/static/js/2.ff361fbe.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.072b5b4b.js",
     "static/js/2.ff361fbe.chunk.js",
     "static/css/main.8b7b7297.chunk.css",
-    "static/js/main.a97673da.chunk.js"
+    "static/js/main.bea5d668.chunk.js"
   ]
 }
