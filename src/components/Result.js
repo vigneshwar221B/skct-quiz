@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 const Result = (props) => {
 	useEffect(() => {
-		fetch('https://limitless-cliffs-33100.herokuapp.com/add')
+		fetch('http://117.239.103.188:5000/', { method: 'POST' })
 			.then((res) => res.json())
 			.then((data) => {})
 			.catch((err) => console.log(err))

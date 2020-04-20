@@ -25,7 +25,7 @@ const Home = (props) => {
 	}
 
 	useEffect(() => {
-		fetch('https://limitless-cliffs-33100.herokuapp.com/howmany')
+		fetch('http://117.239.103.188:5000/')
 			.then((res) => res.json())
 			.then((data) => {
 				setCount(data.count + '+')
