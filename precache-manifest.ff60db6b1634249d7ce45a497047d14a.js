@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a501ef390cb26a971715f4a63a2768f",
+    "revision": "ef6fa825af9d7ff361e1c14111a77d3b",
     "url": "/skct-quiz/index.html"
   },
   {
-    "revision": "3a3d3a45fbe1621c44df",
+    "revision": "2cf3bcec571f879d8401",
     "url": "/skct-quiz/static/css/main.8b7b7297.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/skct-quiz/static/js/2.ff361fbe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a3d3a45fbe1621c44df",
-    "url": "/skct-quiz/static/js/main.349a62fe.chunk.js"
+    "revision": "2cf3bcec571f879d8401",
+    "url": "/skct-quiz/static/js/main.77a1f7d1.chunk.js"
   },
   {
     "revision": "a693f248fd4d8ee35c77",
